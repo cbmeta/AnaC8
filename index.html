@@ -54,6 +54,12 @@ document.getElementById('purchaseButton').addEventListener('click', function() {
   });
 }, false);
 
+document.getElementById('ssnButton').addEventListener('click', function() {
+  fbq('track', 'SSN', {
+    testssn: 111100,
+    type: 'ssn',
+  });
+}, false);
 document.getElementById('subcribeButton').addEventListener('click', function() {
   fbq('track', 'Subscribe');
 }, false);
