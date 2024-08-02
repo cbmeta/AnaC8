@@ -30,6 +30,9 @@ src="https://www.facebook.com/tr?id=1192246241812182&ev=PageView&noscript=1"
         <li><button id="checkoutButton" type="button">Check Out</button></li>
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
+        <li><button id="CustomDataEvent" type="button">CustomDataEvent</button></li>
+        <li><button id="unverifiedEvent" type="button">unverifiedEvent</button></li>     
+        <li><button id="unverifiedAppEvent" type="button">unverifiedAppEvent</button></li>    
         <li><button id="registrationButton" type="button">Registration</button></li>
     </ul>
     </div>
@@ -48,11 +51,23 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 }, false);
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
-  fbq('track', 'Custom_Event_1', {
+  fbq('track', 'Purchase', {
     value: 100,
     currency: 'USD',
   });
 }, false);
+
+document.getElementById('CustomDataEventButton').addEventListener('click', function() {
+  fbq('track', 'CustomDataEvent');
+}, false);
+    
+document.getElementById('unverifiedEventButton').addEventListener('click', function() {
+  fbq('track', 'unverifiedEvent');
+}, false);  
+
+document.getElementById('unverifiedAppEventButton').addEventListener('click', function() {
+  fbq('track', 'unverifiedAppEvent');
+}, false);  
     
 document.getElementById('subcribeButton').addEventListener('click', function() {
   fbq('track', 'Subscribe');
