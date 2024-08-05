@@ -70,8 +70,8 @@ document.getElementById('registrationButton').addEventListener('click', function
   cbq('track', 'CompleteRegistration');
 }, false);
 
-document.getElementById('CustomDataEvent_button').addEventListener('click', function() {
-  cbq('track', 'CustomDataEvent');
+document.getElementById('unverifiedAppEvent_button').addEventListener('click', function() {
+  cbq('track', 'unverifiedAppEvent');
 }, false);
 
 document.getElementById('unverifiedEvent_button').addEventListener('click', function() {
@@ -79,11 +79,11 @@ document.getElementById('unverifiedEvent_button').addEventListener('click', func
 }, false);
 
 
-document.getElementById('unverifiedAppEvent_button').addEventListener('click', function() {
-  cbq('track', 'unverifiedAppEvent', {
+document.getElementById('CustomDataEvent_button').addEventListener('click', function() {
+  cbq('track', 'CustomDataEvent', {
     value: 100,
     currency: 'USD',
-    id:'ssn'  
+    ssn:'11223333'  
   });
 }, false);
     
