@@ -33,10 +33,11 @@
         <li><button id="checkoutButton" type="button">Check Out</button></li>
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
-        <li><button id="registrationButton" type="button">Registration</button></li>
         <li><button id="CustomDataEvent" type="button">CustomDataEvent</button></li>
         <li><button id="unverifiedEvent" type="button">unverifiedEvent</button></li>     
-        <li><button id="unverifiedAppEvent" type="button">unverifiedAppEvent</button></li>    
+        <li><button id="unverifiedAppEvent" type="button">unverifiedAppEvent</button></li>   
+        <li><button id="registrationButton" type="button">Registration</button></li>
+ 
     </ul>
     </div>
 
@@ -64,11 +65,7 @@ document.getElementById('purchaseButton').addEventListener('click', function() {
 document.getElementById('subcribeButton').addEventListener('click', function() {
   cbq('track', 'Subscribe');
 }, false);
-
-document.getElementById('registrationButton').addEventListener('click', function() {
-  cbq('track', 'CompleteRegistration');
-}, false);
-
+    
 document.getElementById('CustomDataEventButton').addEventListener('click', function() {
   cbq('track', 'CustomDataEvent');
 }, false);
@@ -79,7 +76,11 @@ document.getElementById('unverifiedEventButton').addEventListener('click', funct
 
 document.getElementById('unverifiedAppEventButton').addEventListener('click', function() {
   cbq('track', 'unverifiedAppEvent');
-}, false);  
-        
+}, false); 
+    
+document.getElementById('registrationButton').addEventListener('click', function() {
+  cbq('track', 'CompleteRegistration');
+}, false);
+    
 </script>
 </body>
