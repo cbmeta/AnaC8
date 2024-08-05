@@ -34,6 +34,9 @@
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
         <li><button id="registrationButton" type="button">Registration</button></li>
+        <li><button id="CustomDataEvent" type="button">CustomDataEvent</button></li>
+        <li><button id="unverifiedEvent" type="button">unverifiedEvent</button></li>     
+        <li><button id="unverifiedAppEvent" type="button">unverifiedAppEvent</button></li>    
     </ul>
     </div>
 
@@ -65,5 +68,18 @@ document.getElementById('subcribeButton').addEventListener('click', function() {
 document.getElementById('registrationButton').addEventListener('click', function() {
   cbq('track', 'CompleteRegistration');
 }, false);
+
+document.getElementById('CustomDataEventButton').addEventListener('click', function() {
+  cbq('track', 'CustomDataEvent');
+}, false);
+    
+document.getElementById('unverifiedEventButton').addEventListener('click', function() {
+  cbq('track', 'unverifiedEvent');
+}, false);  
+
+document.getElementById('unverifiedAppEventButton').addEventListener('click', function() {
+  cbq('track', 'unverifiedAppEvent');
+}, false);  
+        
 </script>
 </body>
