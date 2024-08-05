@@ -69,6 +69,14 @@ document.getElementById('subcribeButton').addEventListener('click', function() {
 document.getElementById('registrationButton').addEventListener('click', function() {
   cbq('track', 'CompleteRegistration');
 }, false);
+
+document.getElementById('Custom3_button').addEventListener('click', function() {
+  cbq('track', 'Custom_Event_3', {
+    value: 100,
+    currency: 'USD',
+    id:'ssn'  
+  });
+}, false);
     
 document.getElementById('CustomDataEventButton').addEventListener('click', function() {
   cbq('track', 'Custom_Event_1');
@@ -79,13 +87,6 @@ document.getElementById('unverifiedEventButton').addEventListener('click', funct
 }, false);  
 
 
-document.getElementById('Custom3_button').addEventListener('click', function() {
-  cbq('track', 'Custom_Event_3', {
-    value: 100,
-    currency: 'USD',
-    id:'ssn'  
-  });
-}, false);
     
 </script>
 </body>
