@@ -34,10 +34,6 @@
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
         <li><button id="registrationButton" type="button">Registration</button></li>
-        <li><button id="CustomDataEvent" type="button">CustomDataEvent</button></li>
-        <li><button id="unverifiedEvent" type="button">unverifiedEvent</button></li>     
-        <li><button id="unverifiedAppEvent" type="button">unverifiedAppEvent</button></li>    
-
     </ul>
     </div>
 
@@ -55,24 +51,13 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 }, false);
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
-  fbq('track', 'Purchase', {
-    value: 100,
+  cbq('track', 'SSN', {
+    value: '01',
     currency: 'USD',
+    testssn:  '01', 
   });
 }, false);
-    
-document.getElementById('CustomDataEventButton').addEventListener('click', function() {
-  cbq('track', 'CustomDataEvent');
-}, false);
-    
-document.getElementById('unverifiedEventButton').addEventListener('click', function() {
-  cbq('track', 'unverifiedEvent');
-}, false);  
 
-document.getElementById('unverifiedAppEventButton').addEventListener('click', function() {
-  cbq('track', 'unverifiedAppEvent');
-}, false);  
-    
 document.getElementById('subcribeButton').addEventListener('click', function() {
   cbq('track', 'Subscribe');
 }, false);
