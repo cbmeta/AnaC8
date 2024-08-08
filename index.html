@@ -75,13 +75,12 @@ document.getElementById('unverifiedAppEvent_button').addEventListener('click', f
 }, false);
 
 document.getElementById('unverifiedEvent_button').addEventListener('click', function() {
-  cbq('track', 'unverifiedEvent');
+  cbq('track', 'unverifiedEvent', {
  value: 100,
     currency: 'USD',
     ssn:'11223333'  
   });
 }, false);
-
 
 document.getElementById('CustomDataEvent_button').addEventListener('click', function() {
   cbq('track', 'CustomDataEvent', {
