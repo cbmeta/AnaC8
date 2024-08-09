@@ -36,7 +36,7 @@
         <li><button id="registrationButton" type="button">Registration</button></li>    
         <li><button id="CustomDataEvent_button" type="button">CustomDataEvent</button></li>
         <li><button id="unverifiedEvent_button" type="button">unverifiedEvent</button></li>     
-        <li><button id="unverifiedAppEvent_button" type="button">unverifiedAppEvent</button></li>    
+        <li><button id="unWantedEvent_button" type="button">unWantedEvent</button></li>    
 
 
     </ul>
@@ -70,8 +70,8 @@ document.getElementById('registrationButton').addEventListener('click', function
   cbq('track', 'CompleteRegistration');
 }, false);
 
-document.getElementById('unverifiedAppEvent_button').addEventListener('click', function() {
-  cbq('track', 'unverifiedAppEvent');
+document.getElementById('unWantedEvent_button').addEventListener('click', function() {
+  cbq('track', 'unWantedEvent');
 }, false);
 
 document.getElementById('unverifiedEvent_button').addEventListener('click', function() {
