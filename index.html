@@ -9,8 +9,8 @@
     n.queue=[];t=h.createElement(e);t.async=!0;
     t.src=v;s=h.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://34.54.249.215.nip.io/sdk/3091509649498472920/events.js');
-    cbq('setHost', 'https://34.54.249.215.nip.io/');
+    'https://34.54.249.215.ddnip.io/sdk/3091509649498472920/events.js');
+    cbq('setHost', 'https://34.54.dd249.215.nip.io/');
     cbq('init', '3091509649498472920');
     cbq('track', 'PageView');
   </script>
@@ -28,12 +28,8 @@
         <li><button id="checkoutButton" type="button">Check Out</button></li>
         <li><button id="purchaseButton" type="button">Purchase</button></li>
         <li><button id="subcribeButton" type="button">Subscribe</button></li>
-        <li><button id="registrationButton" type="button">Registration</button></li>    
-        <li><button id="CustomDataEvent_button" type="button">CustomDataEvent</button></li>
-        <li><button id="unverifiedEvent_button" type="button">unverifiedEvent</button></li>     
-        <li><button id="unWantedEvent_button" type="button">unWantedEvent</button></li>    
-
-
+        <li><button id="registrationButton" type="button">Registration</button></li>
+        <li><button id="unverifiedEvent_button" type="button">unverifiedEvent</button></li>
     </ul>
     </div>
 
@@ -43,7 +39,7 @@ document.getElementById('addToWishlistButton').addEventListener('click', functio
 }, false);
 
 document.getElementById('addToCartButton').addEventListener('click', function() {
-  cbq('track', 'AddToCart');
+  cbq('track', 'CustomEvent2');
 }, false);
 
 document.getElementById('checkoutButton').addEventListener('click', function() {
@@ -51,8 +47,8 @@ document.getElementById('checkoutButton').addEventListener('click', function() {
 }, false);
 
 document.getElementById('purchaseButton').addEventListener('click', function() {
-  cbq('track', 'Purchase', {
-    value: 100,
+ cbq('track', 'Purchase', {
+    value: "fdsfkdf",
     currency: 'USD',
   });
 }, false);
@@ -60,30 +56,14 @@ document.getElementById('purchaseButton').addEventListener('click', function() {
 document.getElementById('subcribeButton').addEventListener('click', function() {
   cbq('track', 'Subscribe');
 }, false);
-        
+
 document.getElementById('registrationButton').addEventListener('click', function() {
   cbq('track', 'CompleteRegistration');
 }, false);
-
-document.getElementById('unWantedEvent_button').addEventListener('click', function() {
-  cbq('track', 'unWantedEvent');
-}, false);
-
-document.getElementById('unverifiedEvent_button').addEventListener('click', function() {
-  cbq('track', 'unverifiedEvent', {
- value: 100,
-    currency: 'USD',
-    ssn:'11223333'  
-  });
-}, false);
-
-document.getElementById('CustomDataEvent_button').addEventListener('click', function() {
-  cbq('track', 'CustomDataEvent', {
-    value: 100,
-    currency: 'USD',
-    ssn:'11223333'  
-  });
-}, false);
-    
+    document.getElementById('unverifiedEvent_button').addEventListener('click', function()
+{cbq('track', 'unverifiedEvent', {
+    value: 100,currency: 'USD',
+    ssn:'11223333'  }) }, 
+    false);
 </script>
 </body>
